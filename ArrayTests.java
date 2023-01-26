@@ -1,7 +1,5 @@
 import static org.junit.Assert.*;
 
-import java.lang.reflect.Array;
-
 import org.junit.*;
 
 public class ArrayTests {
@@ -30,5 +28,17 @@ public class ArrayTests {
   public void testReversed1() {
     int[] input1 = { 1 };
     assertArrayEquals(new int[]{ 1 }, ArrayExamples.reversed(input1));
+  }
+
+  @Test
+  public void testAverageWithoutLowest1() {
+    double[] input1 = { 1.0 };
+    assertEquals(0.0, ArrayExamples.averageWithoutLowest(input1), 0.0);
+  }
+
+  @Test
+  public void testAverageWithoutLowest2() {
+    double[] input1 = { 1.0, 100.0, 100.0 };
+    assertEquals(100.0, ArrayExamples.averageWithoutLowest(input1), 0.0);
   }
 }
